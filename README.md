@@ -63,3 +63,18 @@ def index(request):
     {% endfor %}
 </body>
 </html>
+
+## create
+
+1. 사용자에게 빈 종이 제공
+2. 빈 종이에 내용을 입력
+3. 입력된 내용을 create로 전송
+4. 전송된 데이터 중에서 필요한 정보를 뽑아내고
+5. DB에 저장
+
+## Update
+
+
+## Delete
+
+1. 

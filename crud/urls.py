@@ -21,10 +21,18 @@ from posts import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     # Read(All)
-    path('index/', views.index),
+    path('posts/', views.index),
     #Read(1)
     path('posts/<int:id>/', views.detail), 
     #Create
     path('posts/new/', views.new),
     path('posts/create/', views.create), 
+    #Delete
+    path('posts/<int:id>/delete/', views.delete),
+    #Update
+    # 기존정보 수정
+    path('posts/<int:id>/edit/', views.edit),
+    # 수정한 정보 데이터 베이스에 반영
+    path('posts/<int:id>/update/', views.update),
+
 ]

@@ -19,20 +19,28 @@ from django.urls import path
 from posts import views
 
 urlpatterns = [
+    # 주소창에 있으면 수행해줘
     path('admin/', admin.site.urls),
     # Read(All)
     path('posts/', views.index),
     #Read(1)
     path('posts/<int:id>/', views.detail), 
+    
     #Create
+    ## 입력하는 공간
     path('posts/new/', views.new),
+    ## 저장하는 공간
     path('posts/create/', views.create), 
+    
     #Delete
     path('posts/<int:id>/delete/', views.delete),
+    
     #Update
     # 기존정보 수정
     path('posts/<int:id>/edit/', views.edit),
     # 수정한 정보 데이터 베이스에 반영
     path('posts/<int:id>/update/', views.update),
-
+                 # 숫자 아무거나 들어온당
 ]
+
+# <int:id> >> 게시물 하나만 찾아서 들어가는 애들
